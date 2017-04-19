@@ -1,8 +1,16 @@
+paths = c(
+  "/Users/paul-armand.veillon/Desktop/Struct_Eco/9f3c724eb6559842417329162d4acab0/g98_5years.csv",
+  "/home/odran/Dropbox/Thèse/Structural econometrics/g98_5years.csv",
+  "C:/Users/Julien/Documents/-- ENSAE/S2/Structural Econometrics/structural-eco/g98_5years.csv"
+)
+
+### Trouver le bon path
+for (i in 1:3){
+  if (file.exists(paths[i])) path <- paths[i]
+}
 
 ####Charger données
-db=read.csv("/Users/paul-armand.veillon/Desktop/Struct_Eco/9f3c724eb6559842417329162d4acab0/g98_5years.csv",sep=",")
-
-db=read.csv("/home/odran/Dropbox/Thèse/Structural econometrics/g98_5years.csv",sep=",")
+db=read.csv(path,sep=",")
 
 
 ###Créations des dummies schooling
